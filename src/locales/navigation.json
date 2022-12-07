@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "About us",
+        "href": "#"
+    },
+    {
+        "id": 2,
+        "name": "Brands",
+        "href": "#"
+    },
+    {
+        "id": 3,
+        "name": "Magazine",
+        "href": "#"
+    },
+    {
+        "id": 4,
+        "name": "Press",
+        "href": "#"
+    },
+    {
+        "id": 5,
+        "name": "Contacts",
+        "href": "#"
+    }
+]

@@ -1,0 +1,26 @@
+// SCSS MODULES
+@import 'variables';
+@import '../components/Header/header';
+@import '../components/BurgerMenu/burgermenu';
+
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400&family=Montserrat:wght@700&family=Playfair+Display&display=swap');
+
+// RESET
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Merriweather, sans-serif;
+}
+
+a {
+    color: $title;
+    text-decoration: none;
+}
+
+input[type='text'] {
+    border: none;
+    outline: none;
+    background-color: unset;
+}
