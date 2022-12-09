@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function Hero() {
+    // slider
     const [currentIndex, setCurrentIndex] = useState(0);
     const [nextIndex, setNextIndex] = useState(1);
 
@@ -21,6 +22,17 @@ export default function Hero() {
         } else {
             setNextIndex(nextIndex + 1);
         }
+    };
+
+    // arrows on hover
+    const [isHovering, setIsHovering] = useState(false);
+
+    const handleMouseOver = () => {
+        setIsHovering(true);
+    };
+
+    const handleMouseOut = () => {
+        setIsHovering(false);
     };
 
     return (
@@ -39,18 +51,41 @@ export default function Hero() {
                 </section>
 
                 <section
-                    className="carousel-next"
+                    className="carousel-next-container"
+                    onMouseOver={handleMouseOver}
+                    onMouseOut={handleMouseOut}
                     onClick={onSlideChange}
-                    key={item[nextIndex].id}
-                    style={{
-                        backgroundImage: `url(${item[nextIndex].image})`
-                    }}>
-                    <h1>{item[nextIndex].title}</h1>
+                    key={item[nextIndex].id}>
+                    <div
+                        className="carousel-next-bg"
+                        style={{
+                            backgroundImage: `url(${item[nextIndex].image})`
+                        }}></div>
 
-                    <div>
-                        <h3>Next</h3>
-                        <FontAwesomeIcon icon={faAngleRight} style={{ marginLeft: '0.5rem' }} />
+                    <div className="carousel-next-titles">
+                        <h1 className="carousel-next-title">{item[nextIndex].title}</h1>
+                        <div className="carousel-next-arrow">
+                            <h3>Next</h3>
+                            <FontAwesomeIcon icon={faAngleRight} style={{ marginLeft: '1rem' }} />
+                            <div
+                                className="arrow"
+                                style={{ visibility: isHovering ? 'visible' : 'hidden' }}>
+                                <FontAwesomeIcon
+                                    icon={faAngleRight}
+                                    style={{ marginLeft: '0.2rem' }}
+                                />
+                                <FontAwesomeIcon
+                                    icon={faAngleRight}
+                                    style={{ marginLeft: '0.2rem' }}
+                                />
+                            </div>
+                        </div>
                     </div>
+                </section>
+
+                <section className="carousel-next-mobile" onClick={onSlideChange}>
+                    <h3>Next</h3>
+                    <FontAwesomeIcon icon={faAngleRight} style={{ marginLeft: '1rem' }} />
                 </section>
             </section>
         </>

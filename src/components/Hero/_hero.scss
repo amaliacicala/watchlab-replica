@@ -1,3 +1,10 @@
+@mixin next {
+    color: white;
+    font-family: Montserrat;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
 .carousel-container {
     position: relative;
     background-color: $primary; // fallback background
@@ -20,7 +27,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 35%;
+        width: 45%;
 
         text-align: center;
         color: $primary;
@@ -28,28 +35,29 @@
         h1 {
             font-family: Playfair Display;
             font-weight: 100;
-            font-size: 4rem;
+            font-size: 5.5rem;
+            line-height: 1.2;
         }
 
         h2 {
             font-family: Montserrat;
             text-transform: uppercase;
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
+            font-size: 1.4rem;
+            margin-bottom: 4rem;
         }
 
         h4 {
-            font-size: 0.8rem;
-            margin: 0.5rem 0 2rem;
+            font-size: 1rem;
+            margin: 1rem 0 3rem;
         }
 
         button {
             background-color: transparent;
             border: solid 1px $secondary;
-            padding: 0.8rem 0;
-            width: 50%;
+            padding: 1rem 0;
+            width: 45%;
             font-family: Playfair Display;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             color: $secondary;
 
             cursor: pointer;
@@ -63,46 +71,142 @@
         }
     }
 
-    .carousel-next {
-        background-color: $primary; // fallback background
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+    .carousel-next-container {
+        position: absolute;
+
+        bottom: 0;
+        right: 5%;
+
+        height: 20rem;
+        width: 29rem;
+
+        overflow: hidden;
+
         color: $primary;
+        cursor: pointer;
         filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.5));
 
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        top: 70%;
-        right: 10%;
-
-        height: 30%;
-        width: 22rem;
-        padding: 0 2rem;
-
-        cursor: pointer;
-
-        h1 {
-            display: flex;
-            align-self: flex-start;
-
-            font-family: Playfair Display;
-            font-weight: 100;
-            text-align: left;
+        &:hover .carousel-next-bg {
+            transform: scale(1.2);
+            background-position-x: 70%;
         }
 
-        div {
+        &:hover .carousel-next-title {
+            transform: scale(1.2);
+            translate: 2rem 0.5rem;
+        }
+
+        .carousel-next-bg {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding: 0 2rem;
+
+            background-color: $primary; // fallback background
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            transition: all 0.4s ease-in-out;
+
+            &::before {
+                content: '';
+                display: none;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: rgba(0, 0, 0, 0.2);
+            }
+
+            &:hover::before {
+                visibility: visible;
+            }
+        }
+
+        .carousel-next-titles {
+            display: flex;
+            height: 100%;
+
+            position: absolute;
+            top: 0;
+            padding: 3rem;
+
+            .carousel-next-title {
+                display: flex;
+                align-self: flex-start;
+
+                font-family: Playfair Display;
+                font-size: 1.625rem;
+                text-align: left;
+
+                transition: all 0.4s ease-in-out;
+            }
+
+            .carousel-next-arrow {
+                display: flex;
+                align-items: center;
+                align-self: flex-end;
+                font-size: 0.9rem;
+
+                transition: all 0.4s ease-in-out;
+
+                h3 {
+                    @include next;
+                }
+
+                .arrow {
+                    display: flex;
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+        }
+    }
+
+    .carousel-next-mobile {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .carousel-container {
+        .carousel-content {
+            width: 95%;
+
+            h1 {
+                font-size: 2.4rem;
+            }
+
+            h2 {
+                font-size: 1rem;
+                margin-bottom: 3rem;
+            }
+
+            h4 {
+                margin: 3rem;
+            }
+
+            button {
+                width: 80%;
+            }
+        }
+
+        .carousel-next-container {
+            display: none;
+        }
+
+        .carousel-next-mobile {
             display: flex;
             align-items: center;
-            align-self: flex-end;
-            font-size: 0.7rem;
+            color: white;
+
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
 
             h3 {
-                font-family: Montserrat;
-                text-transform: uppercase;
-                letter-spacing: 0.2rem;
+                @include next;
             }
         }
     }
