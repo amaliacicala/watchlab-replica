@@ -1,0 +1,16 @@
+[
+    {
+        "id": 0,
+        "heading": "London Collection Season",
+        "title": "New Selection of Henry London",
+        "subtitle": "An estimable experience in the modern collection house",
+        "image": "/images/hero1.png"
+    },
+    {
+        "id": 1,
+        "heading": "London Collection Season",
+        "title": "The Path to Success with Watchlab",
+        "subtitle": "An estimable experience in the modern collection house",
+        "image": "/images/hero2.png"
+    }
+]

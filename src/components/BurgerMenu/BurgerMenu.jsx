@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faXmark, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 import navLinks from '../../locales/navigation.json';
 

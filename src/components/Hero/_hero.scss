@@ -1,0 +1,109 @@
+.carousel-container {
+    position: relative;
+    background-color: $primary; // fallback background
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    height: 92%;
+    min-width: 100%;
+    width: 100%;
+
+    .carousel-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 35%;
+
+        text-align: center;
+        color: $primary;
+
+        h1 {
+            font-family: Playfair Display;
+            font-weight: 100;
+            font-size: 4rem;
+        }
+
+        h2 {
+            font-family: Montserrat;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        h4 {
+            font-size: 0.8rem;
+            margin: 0.5rem 0 2rem;
+        }
+
+        button {
+            background-color: transparent;
+            border: solid 1px $secondary;
+            padding: 0.8rem 0;
+            width: 50%;
+            font-family: Playfair Display;
+            font-size: 1.2rem;
+            color: $secondary;
+
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                background-color: $primary;
+                color: $title;
+                border: solid 1px $primary;
+            }
+        }
+    }
+
+    .carousel-next {
+        background-color: $primary; // fallback background
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: $primary;
+        filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.5));
+
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        top: 70%;
+        right: 10%;
+
+        height: 30%;
+        width: 22rem;
+        padding: 0 2rem;
+
+        cursor: pointer;
+
+        h1 {
+            display: flex;
+            align-self: flex-start;
+
+            font-family: Playfair Display;
+            font-weight: 100;
+            text-align: left;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            align-self: flex-end;
+            font-size: 0.7rem;
+
+            h3 {
+                font-family: Montserrat;
+                text-transform: uppercase;
+                letter-spacing: 0.2rem;
+            }
+        }
+    }
+}
