@@ -6,6 +6,7 @@
 
     @media (max-width: 570px) {
         display: block;
+        z-index: 1;
     }
 
     .dropdown-burger {
@@ -60,10 +61,14 @@
                 font-size: 1.2rem;
             }
 
+            a {
+                font-weight: 300;
+            }
+
             input {
                 width: 90%;
                 height: 1rem;
-                border-bottom: solid 1px $title;
+                border-bottom: solid 1.5px $title;
             }
         }
     }

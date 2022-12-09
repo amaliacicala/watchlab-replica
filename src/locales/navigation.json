@@ -11,16 +11,21 @@
     },
     {
         "id": 3,
-        "name": "Magazine",
+        "name": "Projects",
         "href": "#"
     },
     {
         "id": 4,
-        "name": "Press",
+        "name": "Magazine",
         "href": "#"
     },
     {
         "id": 5,
+        "name": "Press",
+        "href": "#"
+    },
+    {
+        "id": 6,
         "name": "Contacts",
         "href": "#"
     }
