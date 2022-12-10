@@ -85,7 +85,9 @@ export default function Body() {
                 </div>
             </section>
             <section className="body-instagram">
-                <div className="instagram-col1">
+                <div
+                    className="instagram-col1"
+                    style={{ backgroundImage: 'url(/images/discover1.png)' }}>
                     <h5>Instagram</h5>
                     <h1>Discover Watch Lab</h1>
                 </div>
