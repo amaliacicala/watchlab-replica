@@ -1,8 +1,85 @@
 // UI palette
-
 $primary: #ffffff;
 $secondary: #d0c5b6;
 $tertiary: #333333;
 $highlight: #d9d9d9;
 $title: #000000;
 $text: #808080;
+
+// MIXINS
+@mixin next {
+    color: $primary;
+    font-family: Montserrat;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+@mixin button {
+    background-color: transparent;
+    border: solid 1px $secondary;
+    padding: 1rem 0;
+    width: 45%;
+    font-family: Playfair Display;
+    font-size: 1.4rem;
+    color: $secondary;
+
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: $primary;
+        color: $title;
+    }
+
+    @media screen and (max-width: 570px) {
+        width: 80%;
+    }
+}
+
+@mixin body-title-lg {
+    color: $title;
+    font-family: Playfair Display, sans-serif;
+    font-size: 5.6rem;
+
+    @media screen and (max-width: 570px) {
+        font-size: 2.8rem;
+        text-align: center;
+    }
+}
+
+@mixin body-title-md {
+    @include body-title-lg;
+    font-size: 3.7rem;
+
+    @media screen and (max-width: 570px) {
+        font-size: 2.4rem;
+        text-align: center;
+    }
+}
+
+@mixin body-text {
+    color: $text;
+    font-family: Merriweather, sans-serif;
+    font-size: 1.25rem;
+    letter-spacing: 0.1rem;
+    line-height: 3rem;
+
+    @media screen and (max-width: 570px) {
+        font-size: 1rem;
+        text-align: center;
+        line-height: 2rem;
+    }
+}
+
+@mixin collection-title {
+    font-family: Montserrat;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: $title;
+
+    @media only screen and (max-width: 570px) {
+        font-size: 0.9rem;
+        margin-bottom: 3rem;
+    }
+}

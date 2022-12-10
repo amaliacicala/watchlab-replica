@@ -39,13 +39,13 @@ export default function Body() {
             <section className="body-collection">
                 {collection.map((collection) => (
                     <section key={collection.id} className="body-collection-item">
-                        <div>
+                        <div className="body-collection-item-text">
                             <h3>{collection.heading}</h3>
                             <h2>{collection.title}</h2>
                             <p>{collection.text}</p>
                             <button>View</button>
                         </div>
-                        <div>
+                        <div className="body-collection-item-image">
                             <img src={collection.image} alt={collection.title} />
                         </div>
                     </section>

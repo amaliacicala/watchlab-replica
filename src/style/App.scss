@@ -34,3 +34,7 @@ input[type='text'] {
     outline: none;
     background-color: unset;
 }
+
+button {
+    @include button;
+}
