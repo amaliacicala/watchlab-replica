@@ -2,13 +2,83 @@
     color: $title;
     font-family: Playfair Display, sans-serif;
     font-size: 5.6rem;
+
+    @media screen and (max-width: 570px) {
+        font-size: 2.8rem;
+        text-align: center;
+    }
 }
 
 @mixin body-title-md {
     @extend body-title-lg;
     font-size: 3.7rem;
+
+    @media screen and (max-width: 570px) {
+        font-size: 2.8rem;
+        text-align: center;
+    }
+}
+
+@mixin body-text {
+    color: $text;
+    font-family: Merriweather, sans-serif;
+    font-size: 1.25rem;
+    letter-spacing: 0.1rem;
+    line-height: 3rem;
+
+    @media screen and (max-width: 570px) {
+        font-size: 1rem;
+        text-align: center;
+        line-height: 2rem;
+    }
 }
 
 main {
     background-color: $primary;
+
+    .body-intro {
+        display: flex;
+        flex-direction: column;
+        padding: 6rem;
+
+        @media screen and (max-width: 570px) {
+            padding: 5rem 0;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            @include body-title-lg;
+            width: 40%;
+
+            @media screen and (max-width: 570px) {
+                width: 100%;
+            }
+        }
+
+        .body-intro-grid {
+            display: flex;
+            gap: 18rem;
+            margin-top: -4rem;
+
+            @media screen and (max-width: 570px) {
+                gap: 2rem;
+                margin: 2rem;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .body-intro-col1 {
+                width: 80%;
+            }
+
+            .body-intro-col2 {
+                width: 100%;
+            }
+        }
+
+        p {
+            @include body-text;
+        }
+    }
 }

@@ -26,12 +26,14 @@ export default function Body() {
     return (
         <main>
             <section className="body-intro">
-                <div>
-                    <h1>{item.intro.title}</h1>
-                    <p>{item.intro.textLeft}</p>
-                </div>
-                <div>
-                    <p>{item.intro.textRight}</p>
+                <h1>{item.intro.title}</h1>
+                <div className="body-intro-grid">
+                    <div className="body-intro-col1">
+                        <p>{item.intro.textLeft}</p>
+                    </div>
+                    <div className="body-intro-col2">
+                        <p>{item.intro.textRight}</p>
+                    </div>
                 </div>
             </section>
             <section className="body-collection">
