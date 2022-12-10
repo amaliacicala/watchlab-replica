@@ -11,12 +11,14 @@ export default function Hero() {
     const [nextIndex, setNextIndex] = useState(1);
 
     const onSlideChange = () => {
+        // change slide on main container
         if (currentIndex === item.length - 1) {
             setCurrentIndex(0);
         } else {
             setCurrentIndex(currentIndex + 1);
         }
 
+        // change slide on preview container
         if (nextIndex === item.length - 1) {
             setNextIndex(0);
         } else {

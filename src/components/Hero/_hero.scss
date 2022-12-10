@@ -18,7 +18,7 @@
     flex-direction: column;
     flex-wrap: wrap;
 
-    height: 92%;
+    height: 60rem;
     min-width: 100%;
     width: 100%;
 
@@ -43,10 +43,12 @@
             font-family: Montserrat;
             text-transform: uppercase;
             font-size: 1.4rem;
+            font-weight: 900;
             margin-bottom: 4rem;
         }
 
         h4 {
+            font-family: Merriweather, sans-serif;
             font-size: 1rem;
             margin: 1rem 0 3rem;
         }
@@ -154,6 +156,7 @@
 
                 h3 {
                     @include next;
+                    font-weight: 900;
                 }
 
                 .arrow {
