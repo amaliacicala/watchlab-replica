@@ -1,7 +1,11 @@
 import { useState } from 'react';
+
 import item from '../../locales/body-text.json';
 import collection from '../../locales/collection.json';
 import press from '../../locales/body-carousel.json';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function Body() {
     // slider
@@ -52,18 +56,32 @@ export default function Body() {
                 ))}
             </section>
             <section className="body-press">
-                <div>
+                <div className="body-press-text">
                     <h1>{item.press.title}</h1>
                     <p>{item.press.textLeft}</p>
                 </div>
-                <div className="press-carousel-container" key={press[currentIndex].id}>
+                <div className="body-press-carousel">
                     <div className="grey-square"></div>
-                    <img src={press[currentIndex].image} />
-                    <h4>Press</h4>
-                    <h3>{press[currentIndex].date}</h3>
-                    <h2>{press[currentIndex].title}</h2>
-                    <button onClick={onNextSlide}>Previous</button>
-                    <button onClick={onPreviousSlide}>Next</button>
+                    <div className="press-carousel-container" key={press[currentIndex].id}>
+                        <img src={press[currentIndex].image} />
+                        <div className="press-carousel-text">
+                            <h4>Press</h4>
+                            <h3>{press[currentIndex].date}</h3>
+                            <h2>{press[currentIndex].title}</h2>
+                            <div className="press-carousel-buttons">
+                                <FontAwesomeIcon
+                                    onClick={onNextSlide}
+                                    icon={faAngleLeft}
+                                    style={{ cursor: 'pointer' }}
+                                />
+                                <FontAwesomeIcon
+                                    onClick={onPreviousSlide}
+                                    icon={faAngleRight}
+                                    style={{ cursor: 'pointer' }}
+                                />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section className="body-instagram">

@@ -6,7 +6,7 @@ main {
         padding: 0;
     }
 
-    // INTRO SECTION -----------
+    // INTRO SECTION --------------------------
     .body-intro {
         display: flex;
         flex-direction: column;
@@ -53,7 +53,7 @@ main {
         }
     }
 
-    // COLLECTION SECTION -----------
+    // COLLECTION SECTION --------------------------
 
     .body-collection {
         display: flex;
@@ -107,7 +107,7 @@ main {
                     margin: 5rem 0;
 
                     @media screen and (max-width: 570px) {
-                        margin: 2rem 1rem;
+                        margin: 2rem 1.4rem;
                     }
                 }
 
@@ -145,6 +145,144 @@ main {
                     @media screen and (max-width: 570px) {
                         width: 100%;
                         height: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    // PRESS SECTION --------------------------
+
+    .body-press {
+        display: flex;
+        gap: 6%;
+        width: 100%;
+        height: 70rem;
+        padding: 10rem 0;
+
+        @media screen and (max-width: 570px) {
+            flex-direction: column;
+            padding: 5rem 0;
+            gap: 4%;
+        }
+
+        .body-press-text {
+            width: 26%;
+
+            @media screen and (max-width: 570px) {
+                width: 100%;
+            }
+
+            h1 {
+                @include body-title-lg;
+                @media screen and (max-width: 570px) {
+                    padding: 0 1.2rem;
+                }
+            }
+
+            p {
+                @include body-text;
+                margin-top: -4rem;
+
+                @media screen and (max-width: 570px) {
+                    margin-top: 2rem;
+                    text-align: left;
+                    padding: 0 1.4rem;
+                }
+            }
+        }
+
+        .body-press-carousel {
+            position: relative;
+            width: 70%;
+
+            @media screen and (max-width: 570px) {
+                width: 100%;
+            }
+
+            .grey-square {
+                position: absolute;
+                right: 0;
+                background-color: $highlight;
+                width: 55rem;
+                height: 100%;
+
+                @media screen and (max-width: 570px) {
+                    display: none;
+                }
+            }
+
+            .press-carousel-container {
+                display: flex;
+                gap: 5%;
+                position: absolute;
+                bottom: 5%;
+                left: 3%;
+                z-index: 1;
+
+                @media screen and (max-width: 570px) {
+                    flex-direction: column;
+                    position: static;
+                    background-color: $highlight;
+                    padding: 2.4rem 1.4rem;
+                }
+
+                img {
+                    min-width: 40rem;
+                    min-height: 32rem;
+
+                    @media screen and (max-width: 570px) {
+                        min-width: unset;
+                        min-height: unset;
+                    }
+                }
+
+                .press-carousel-text {
+                    display: flex;
+                    flex-direction: column;
+
+                    h2 {
+                        @include body-title-md;
+                        font-size: 2.5rem;
+                        margin: 3rem 5rem 3rem 0;
+
+                        @media screen and (max-width: 570px) {
+                            margin: 0;
+                            text-align: left;
+                        }
+                    }
+
+                    h3 {
+                        @include collection-title;
+                        font-size: 1rem;
+                        letter-spacing: 0.3rem;
+                        color: $secondary;
+                        margin-top: 0.8rem;
+
+                        @media screen and (max-width: 570px) {
+                            font-size: 1.2rem;
+                        }
+                    }
+
+                    h4 {
+                        @include collection-title;
+                        font-size: 1rem;
+
+                        @media screen and (max-width: 570px) {
+                            font-size: 1.2rem;
+                            margin: 1.4rem 0 0 0;
+                        }
+                    }
+                }
+
+                .press-carousel-buttons {
+                    display: flex;
+                    gap: 10%;
+                    margin-top: 1rem;
+
+                    @media screen and (max-width: 570px) {
+                        justify-content: center;
+                        margin-top: 6rem;
                     }
                 }
             }
