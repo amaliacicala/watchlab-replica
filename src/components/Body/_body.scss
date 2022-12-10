@@ -1,0 +1,14 @@
+@mixin body-title-lg {
+    color: $title;
+    font-family: Playfair Display, sans-serif;
+    font-size: 5.6rem;
+}
+
+@mixin body-title-md {
+    @extend body-title-lg;
+    font-size: 3.7rem;
+}
+
+main {
+    background-color: $primary;
+}
