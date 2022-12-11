@@ -1,0 +1,115 @@
+.newsletter {
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    margin-top: 4rem;
+    padding: 4rem 0;
+
+    @media screen and (max-width: 570px) {
+        margin-top: 0;
+    }
+
+    .newsletter-text {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        @media screen and (max-width: 570px) {
+            width: 100%;
+        }
+
+        h2 {
+            @include body-title-lg;
+            color: $primary;
+
+            @media screen and (max-width: 570px) {
+                font-size: 3.2rem;
+            }
+        }
+
+        h4 {
+            @include collection-title;
+            color: $primary;
+            font-size: 1.1rem;
+            letter-spacing: 0.2rem;
+            margin: 0 4rem;
+
+            @media screen and (max-width: 570px) {
+                font-size: 1rem;
+                margin: 1rem 0 2rem;
+            }
+        }
+
+        .input-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5%;
+            width: 100%;
+            margin-top: 2rem;
+
+            input {
+                background-color: transparent;
+                border: solid 1px $primary;
+
+                padding: 1rem 1.1rem;
+                line-height: 2rem;
+                font-size: 1.3rem;
+
+                transition: all 0.3s ease-in-out;
+
+                @media screen and (max-width: 570px) {
+                    font-size: 1.5rem;
+                    padding: 1.5rem 1.1rem;
+                }
+            }
+
+            input[type='email'] {
+                width: 75%;
+
+                @media screen and (max-width: 570px) {
+                    width: 65%;
+                }
+
+                &::placeholder {
+                    font-family: Playfair Display, sans-serif;
+                    color: $primary;
+                    transition: all 0.3s ease-in-out;
+                }
+
+                &:focus {
+                    outline: none;
+                    border: solid 1px $secondary;
+                    font-family: Playfair Display, sans-serif;
+                    color: $primary;
+
+                    &::placeholder {
+                        color: $secondary;
+                    }
+                }
+            }
+
+            input[type='submit'] {
+                width: 11%;
+                font-family: Playfair Display, sans-serif;
+                color: $primary;
+                cursor: pointer;
+
+                @media screen and (max-width: 570px) {
+                    width: 16%;
+                }
+
+                &:hover {
+                    color: $secondary;
+                    border-color: $secondary;
+                }
+            }
+        }
+    }
+}
