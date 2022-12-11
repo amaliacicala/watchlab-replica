@@ -112,6 +112,21 @@ main {
                 }
 
                 button {
+                    @keyframes hover {
+                        0% {
+                            background-color: $text;
+                        }
+
+                        100% {
+                            background-color: $primary;
+                        }
+                    }
+
+                    &:hover {
+                        animation-name: hover;
+                        animation-duration: 0.5s;
+                    }
+
                     @media screen and (max-width: 570px) {
                         margin: 0.5rem 0 2.4rem;
                     }
