@@ -37,6 +37,9 @@
     top: 10%;
     left: 0;
     text-align: start;
+    opacity: 0;
+    transition: opacity 0.5s, visibility 0.5s;
+    -webkit-transition: opacity 0.5s, visibility 0.5s;
 
     .dropdown-item-burger {
         margin-left: 2%;

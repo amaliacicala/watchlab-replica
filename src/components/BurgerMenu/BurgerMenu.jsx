@@ -12,12 +12,14 @@ export default function BurgerMenu() {
     useEffect(() => {
         if (open) {
             const dropdownMenu = inputRef.current;
-            dropdownMenu.style.display = 'block';
+            dropdownMenu.style.visibility = 'visible';
+            dropdownMenu.style.opacity = '1';
         }
 
         if (!open) {
             const dropdownMenu = inputRef.current;
-            dropdownMenu.style.display = 'none';
+            dropdownMenu.style.visibility = 'hidden';
+            dropdownMenu.style.opacity = '0';
         }
     });
 
@@ -40,7 +42,7 @@ export default function BurgerMenu() {
                 onChange={!open ? () => setOpen(true) : () => setOpen(false)}
             />
 
-            <div id="dropdown-menu" ref={inputRef}>
+            <div id="dropdown-menu" className="open" ref={inputRef}>
                 <nav>
                     <ul>
                         <li key="0">
