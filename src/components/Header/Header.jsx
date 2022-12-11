@@ -26,6 +26,7 @@ export default function Header() {
 
             <section className="header-search">
                 <input type="text" />
+                {/* <img src="/icons/magnifying-glass-desktop.png" style={{ cursor: 'pointer' }} /> */}
                 <FontAwesomeIcon className="search-icon" icon={faMagnifyingGlass} />
             </section>
 

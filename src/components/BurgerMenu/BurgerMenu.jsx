@@ -27,11 +27,22 @@ export default function BurgerMenu() {
         <div className="dropdown-burger">
             <label htmlFor="checkbox">
                 {!open ? (
-                    <FontAwesomeIcon icon={faBars} style={{ fontSize: '2rem', color: 'white' }} />
+                    <FontAwesomeIcon
+                        icon={faBars}
+                        style={{
+                            fontSize: '2rem',
+                            color: 'white',
+                            transition: 'all 0.4s ease-in-out'
+                        }}
+                    />
                 ) : (
                     <FontAwesomeIcon
                         icon={faXmark}
-                        style={{ fontSize: '2.2rem', color: 'white' }}
+                        style={{
+                            fontSize: '2.2rem',
+                            color: 'white',
+                            transition: 'all 0.4s ease-in-out'
+                        }}
                     />
                 )}
             </label>
@@ -47,6 +58,10 @@ export default function BurgerMenu() {
                     <ul>
                         <li key="0">
                             <input type="text" />
+                            {/* <img
+                                src="/icons/magnifying-glass-mobile.png"
+                                style={{ cursor: 'pointer' }}
+                            /> */}
                             <FontAwesomeIcon className="search-icon" icon={faMagnifyingGlass} />
                         </li>
 

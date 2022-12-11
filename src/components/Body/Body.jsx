@@ -20,8 +20,8 @@ export default function Body() {
     };
 
     const onPreviousSlide = () => {
-        if (currentIndex === press.length - 1) {
-            setCurrentIndex(0);
+        if (currentIndex === 0) {
+            setCurrentIndex(press.length - 1);
         } else {
             setCurrentIndex(currentIndex - 1);
         }
@@ -70,12 +70,12 @@ export default function Body() {
                             <h2>{press[currentIndex].title}</h2>
                             <div className="press-carousel-buttons">
                                 <FontAwesomeIcon
-                                    onClick={onNextSlide}
+                                    onClick={onPreviousSlide}
                                     icon={faAngleLeft}
                                     style={{ cursor: 'pointer' }}
                                 />
                                 <FontAwesomeIcon
-                                    onClick={onPreviousSlide}
+                                    onClick={onNextSlide}
                                     icon={faAngleRight}
                                     style={{ cursor: 'pointer' }}
                                 />
