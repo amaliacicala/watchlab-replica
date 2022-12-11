@@ -71,7 +71,10 @@ export default function Hero() {
                             <FontAwesomeIcon icon={faAngleRight} style={{ marginLeft: '1rem' }} />
                             <div
                                 className="arrow"
-                                style={{ visibility: isHovering ? 'visible' : 'hidden' }}>
+                                style={{
+                                    visibility: isHovering ? 'visible' : 'hidden',
+                                    opacity: isHovering ? '1' : '0'
+                                }}>
                                 <FontAwesomeIcon
                                     icon={faAngleRight}
                                     style={{ marginLeft: '0.2rem' }}
