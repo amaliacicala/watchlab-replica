@@ -22,7 +22,7 @@ footer {
     .footer-logo {
         padding: 4.5rem 9rem 2.2rem;
 
-        @media screen and (max-width: 570px) {
+        @media screen and (max-width: 768px) {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -35,7 +35,7 @@ footer {
             margin: 0;
             max-width: 15%;
 
-            @media screen and (max-width: 570px) {
+            @media screen and (max-width: 768px) {
                 max-width: 60%;
             }
         }
@@ -48,7 +48,7 @@ footer {
         grid-template-rows: 3fr 0.5fr;
         grid-template-areas: 'col1 col2 col3 col4';
 
-        @media screen and (max-width: 570px) {
+        @media screen and (max-width: 768px) {
             padding: 0 2rem;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1.5fr 0.9fr;
@@ -64,7 +64,7 @@ footer {
             padding: 0 9rem;
             grid-area: col1;
 
-            @media screen and (max-width: 570px) {
+            @media screen and (max-width: 768px) {
                 padding: 0;
                 border-top: solid 1px;
                 text-align: center;
@@ -74,7 +74,7 @@ footer {
             }
 
             .address {
-                @media screen and (max-width: 570px) {
+                @media screen and (max-width: 768px) {
                     display: flex;
                     justify-content: center;
                     gap: 0.5rem;
@@ -85,7 +85,7 @@ footer {
         .footer-col2 {
             grid-area: col2;
 
-            @media screen and (max-width: 570px) {
+            @media screen and (max-width: 768px) {
                 padding: 0.8rem 0;
             }
         }
@@ -93,7 +93,7 @@ footer {
         .footer-col3 {
             grid-area: col3;
 
-            @media screen and (max-width: 570px) {
+            @media screen and (max-width: 768px) {
                 padding: 0.8rem 0;
                 text-align: right;
             }
@@ -102,7 +102,7 @@ footer {
         .footer-col4 {
             grid-area: col4;
 
-            @media screen and (max-width: 570px) {
+            @media screen and (max-width: 768px) {
                 text-align: center;
                 line-height: 2.8rem;
             }
@@ -124,7 +124,7 @@ footer {
             padding: 1.25rem 9rem;
             grid-column: 1 / 5;
 
-            @media screen and (max-width: 570px) {
+            @media screen and (max-width: 768px) {
                 display: none;
             }
         }

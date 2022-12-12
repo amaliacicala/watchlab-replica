@@ -20,7 +20,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 45%;
+        width: 45rem;
 
         text-align: center;
         color: $primary;
@@ -147,7 +147,7 @@
     }
 }
 
-@media only screen and (max-width: 570px) {
+@media only screen and (max-width: 768px) {
     .carousel-container {
         height: 90vh;
 
