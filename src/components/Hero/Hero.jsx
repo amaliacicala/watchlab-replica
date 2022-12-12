@@ -82,10 +82,15 @@ export default function Hero() {
                         <h2>{item[currentIndex].heading}</h2>
                         <motion.h1
                             key={item[currentIndex].id}
-                            variants={currentIndex % 2 == 0 ? titleVariantsEven : titleVariantsOdd}
+                            variants={
+                                !firstRender.current
+                                    ? currentIndex % 2 == 0
+                                        ? titleVariantsEven
+                                        : titleVariantsOdd
+                                    : {}
+                            }
                             animate="animate"
                             initial="initial"
-                            // exit="exit"
                             transition={{
                                 duration: 0.4
                             }}>
