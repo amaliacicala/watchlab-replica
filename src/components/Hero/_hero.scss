@@ -63,7 +63,7 @@
 
         &:hover .carousel-next-bg {
             transform: scale(1.2);
-            background-position-x: 70%;
+            filter: brightness(0.7);
         }
 
         &:hover .carousel-next-title {
